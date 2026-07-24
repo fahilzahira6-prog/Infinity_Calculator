@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Calculator</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-calculator"></i>
+                <div>
+                    <h2>InfinityCal</h2>
+                    <span>Smart Calculator</span>
+                </div>
+            </div>
+            <nav>
+                <a id="calculatorLink" class="nav-link active">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Calculator</span>
+                </a>
+                <a id="historyLink" class="nav-link">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+                <a id="converterLink" class="nav-link">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <span>Converter</span>
+                </a>
+                <a id="settingsLink" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p> Infinity Calculator </p>
+                <small> HTML • CSS • JavaScript </small>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT-->
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1>Calculator</h1>
+                    <p> Fast, simple and professional calculator </p>
+                </div>
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </header>
+            <section id="calculatorPage" class="page active-page">
+                <div class="calculator-card">
+                    <!-- Display -->
+                    <div class="display">
+                        <div id="previousDisplay">
+                        </div>
+                        <div id="currentDisplay"> 0 </div>
+                    </div>
+                    <!-- Calculator Buttons -->
+                    <div class="buttons">
+                        <button class="action" data-action="clear"> AC </button>
+                        <button class="action" data-action="sign"> +/− </button>
+                        <button class="action" data-action="backspace">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </button>
+                        <button class="operator" data-operation="/"> ÷ </button>
+                        <button class="number" data-number="7">7</button>
+                        <button class="number" data-number="8">8</button>
+                        <button class="number" data-number="9">9</button>
+                        <button class="operator" data-operation="*">×</button>
+                        <button class="number" data-number="4">4</button>
+                        <button class="number" data-number="5">5</button>
+                        <button class="number" data-number="6">6</button>
+                        <button class="operator" data-operation="-">−</button>
+                        <button class="number" data-number="1">1</button>
+                        <button class="number" data-number="2">2</button>
+                        <button class="number" data-number="3">3</button>
+                        <button class="operator" data-operation="+">+</button>
+                        <button class="number zero" data-number="0"> 0 </button>
+                        <button class="number" data-number="."> . </button>
+                        <button class="equals" data-action="equals"> = </button>
+                    </div>
+                </div>
+            </section>
+            <!-- HISTORY PAGE -->
+            <section id="historyPage" class="page">
+                <div class="page-card">
+                    <div class="page-title">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <h2>Calculation History</h2>
+                    </div>
+                    <div id="historyList" class="history-list">
+                        <div class="empty-message">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>No calculations yet.</p>
+                        </div>
+                    </div>
+                    <button id="clearHistoryBtn" class="secondary-btn">
+                        <i class="fa-solid fa-trash"></i> 
+                        Clear History
+                    </button>
+                </div>
+            </section>
+            <!-- CONVERTER PAGE -->
+            <section id="converterPage" class="page">
+                <div class="page-card">
+                    <div class="page-title">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <h2>Unit Converter</h2>
+                    </div>
+                    <div class="converter-box">
+                        <input type="number" id="converterInput" placeholder="Enter a value">
+                        <select id="converterType">
+                            <option value="cm-m">cm → m</option>
+                            <option value="m-cm">m → cm</option>
+                            <option value="kg-g">kg → g</option>
+                            <option value="g-kg">g → kg</option>
+                            <option value="c-f">°C → °F</option>
+                            <option value="f-c">°F → °C</option>
+                        </select>
+                        <button id="convertBtn" class="primary-btn"> Convert </button>
+                        <div id="converterResult" class="converter-result"> Result : -- </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SETTINGS PAGE -->
+            <section id="settingsPage" class="page">
+                <div class="page-card">
+                    <div class="page-title">
+                        <i class="fa-solid fa-gear"></i>
+                        <h2>Settings</h2>
+                    </div>
+                    <div class="setting-item">
+                        <label for="themeSelect"> Theme </label>
+                        <select id="themeSelect">
+                            <option value="light"> Light </option>
+                            <option value="dark"> Dark </option>
+                            <option value="system"> System </option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <span> Version </span>
+                        <strong> Infinity Calculator 2.0 </strong>
+                    </div>
+                    <div class="setting-item">
+                        <span> Keyboard Shortcuts </span>
+                        <strong> Enabled </strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
