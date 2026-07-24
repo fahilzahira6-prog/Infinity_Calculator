@@ -164,11 +164,11 @@ nav{
 /* CALCULATOR CARD */
 .calculator-card{
     width:100%;
-    max-width:590px;
+    max-width:490px;
     margin:0 auto;
     background:var(--surface);
     border-radius:25px;
-    padding:28px;
+    padding:18px;
     box-shadow:var(--shadow);
 }
 
