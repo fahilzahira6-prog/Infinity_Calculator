@@ -118,7 +118,7 @@ nav{
 /*  MAIN*/
 .main{
     flex:1;
-    padding:15px;
+    padding:20px;
     width:100%;
     overflow-x:hidden;
 }
@@ -126,7 +126,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:35px;
+    margin-bottom:15px;
 }
 .topbar h1{
     font-size:30px;
@@ -168,13 +168,13 @@ nav{
     margin:0 auto;
     background:var(--surface);
     border-radius:25px;
-    padding:18px;
+    padding:20px;
     box-shadow:var(--shadow);
 }
 
 /*  DISPLAY*/
 .display{
-    min-height:150px;
+    min-height:110px;
     background:var(--surface-hover);
     border:1px solid var(--border);
     border-radius:18px;
@@ -192,7 +192,7 @@ nav{
     font-size:20px;
 }
 #currentDisplay{
-    font-size:58px;
+    font-size:42px;
     font-weight:600;
     color:var(--text);
     word-break:break-word;
@@ -245,7 +245,7 @@ button:active{
     background:var(--primary-hover);
 }
 .equals{
-    height:72px;
+    height:60px;
     background:#16a34a;
     color:white;
     border-radius:18px;
@@ -438,9 +438,7 @@ button:active{
         justify-content:space-around;
         margin-top:20px;
     }
-    .main{
-        padding:20px;
-    }
+    
     .topbar{
         flex-direction:column;
         gap:15px;
